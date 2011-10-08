@@ -19,8 +19,17 @@ alias lsa='ls -lah'
 alias l='ls -la'
 alias ll='ls -l'
 alias sl=ls # often screw this up
+alias lsc='ls -pG'
 
 alias afind='ack-grep -il'
+
+# Git
+alias gcm='git commit -m'
+
+# Browsers
+alias firefox='open /Applications/Firefox.app'
+alias webkit='open /Applications/WebKit.app'
+alias chrome='open /Applications/Google\ Chrome.app'
 
 # Edit all the files
 alias edit='mvim'
