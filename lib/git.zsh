@@ -1,17 +1,34 @@
 # get the name of the branch we are on
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  if [[ -n $(git status -s 2> /dev/null) ]]; then
+    dirty_color=$fg[red]
+  else
+    dirty_color=$fg[green]
+  fi
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX%{$dirty_color%}${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # Checks if working tree is dirty
 parse_git_dirty() {
-  if [[ -n $(git status -s --ignore-submodules=dirty 2> /dev/null) ]]; then
+  if [[ -n $(git status -s 2> /dev/null) ]]; then
     echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
   else
     echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
   fi
 }
+
+# function git_prompt() {
+#   gstatus=$(git status 2> /dev/null)
+#   branch=$(echo $gstatus | head -1 | sed 's/^# On branch //')
+#   dirty=$(echo $gstatus | sed 's/^#.*$//' | tail -2 | grep 'nothing to commit (working directory clean)'; echo $?)
+#   if [[ x$branch != x ]]; then
+#     dirty_color=$fg[green]
+#     push_status=$(git_need_to_push $gstatus 2> /dev/null)
+#     if [[ $dirty = 1 ]] { dirty_color=$fg[red] }
+#     [ x$branch != x ] && echo " %{$dirty_color%}$branch%{$reset_color%} $push_status"
+#   fi
+# }
 
 # Checks if there are commits ahead from remote
 function git_prompt_ahead() {
@@ -61,4 +78,16 @@ git_prompt_status() {
     STATUS="$ZSH_THEME_GIT_PROMPT_UNMERGED$STATUS"
   fi
   echo $STATUS
+}
+
+function git_score () {
+  alias gscore='git_score'
+	git log | grep '^Author' | sort | uniq -ci | sort -r
+}
+
+function git_track () {
+  branch=$(current_branch)
+  git config branch.$branch.remote origin
+  git config branch.$branch.merge refs/heads/$branch
+  echo "tracking origin/$tracking"
 }
