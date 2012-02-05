@@ -23,6 +23,8 @@ alias lsc='ls -pG'
 
 alias afind='ack-grep -il'
 
+#rbenv
+alias rbhash='rbenv rehash'
 # rvm
 alias rvmgc='rvm gemset create'
 # Git
@@ -30,8 +32,8 @@ alias gcm='git commit -m'
 
 # Browsers
 alias firefox='open /Applications/Firefox.app'
-alias webkit='open /Applications/WebKit.app'
+alias webkit='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
 
 # Edit all the files
-alias edit='mvim'
+alias edit='subl'
