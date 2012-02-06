@@ -37,3 +37,5 @@ alias chrome='open /Applications/Google\ Chrome.app'
 
 # Edit all the files
 alias edit='subl'
+alias webkit='open /Applications/WebKit.app'
+alias chrome='open /Applications/Google\ Chrome.app'
