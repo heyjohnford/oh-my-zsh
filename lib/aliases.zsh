@@ -32,10 +32,8 @@ alias gcm='git commit -m'
 
 # Browsers
 alias firefox='open /Applications/Firefox.app'
-alias webkit='open /Applications/Safari.app'
+alias safari='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
 
 # Edit all the files
 alias edit='subl'
-alias webkit='open /Applications/WebKit.app'
-alias chrome='open /Applications/Google\ Chrome.app'
