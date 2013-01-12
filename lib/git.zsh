@@ -6,7 +6,7 @@ function git_prompt_info() {
   else
     dirty_color=$fg[green]
   fi
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX%{$dirty_color%}${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "%{$dirty_color%}$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # Checks if working tree is dirty
