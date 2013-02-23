@@ -2,12 +2,7 @@
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || \
   ref=$(git rev-parse --short HEAD 2> /dev/null) || return
-  if [[ -n $(git status -s 2> /dev/null) ]]; then
-    dirty_color=$fg[red]
-  else
-    dirty_color=$fg[green]
-  fi
-  echo "%{$dirty_color%}$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX$(parse_git_dirty)${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
 # Checks if working tree is dirty
@@ -107,18 +102,6 @@ git_prompt_status() {
     STATUS="$ZSH_THEME_GIT_PROMPT_DIVERGED$STATUS"
   fi
   echo $STATUS
-}
-
-function git_score () {
-  alias gscore='git_score'
-	git log | grep '^Author' | sort | uniq -ci | sort -r
-}
-
-function git_track () {
-  branch=$(current_branch)
-  git config branch.$branch.remote origin
-  git config branch.$branch.merge refs/heads/$branch
-  echo "tracking origin/$tracking"
 }
 
 #compare the provided version of git to the version installed and on path
