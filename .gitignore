@@ -5,5 +5,6 @@ custom/*
 !custom/example
 !custom/example.zsh
 *.swp
+.DS_Store
 !custom/example.zshcache
 cache/
