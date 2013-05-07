@@ -17,7 +17,7 @@ alias history='fc -l 1'
 
 # List direcory contents
 alias lsa='ls -lah'
-alias l='ls -lA1'
+#alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -lA'
 alias sl=ls # often screw this up
@@ -27,8 +27,10 @@ alias afind='ack-grep -il'
 
 #rbenv
 alias rbhash='rbenv rehash'
+
 # rvm
 alias rvmgc='rvm gemset create'
+
 # Git
 alias gcm='git commit -m'
 
@@ -37,5 +39,5 @@ alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
 
-# Edit all the files
+# Edit files
 alias edit='subl'
