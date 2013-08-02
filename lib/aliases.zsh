@@ -38,6 +38,8 @@ alias gcm='git commit -m'
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
+alias my_github='open -a /Applications/Google\ Chrome.app "http://github.com/johnamiahford"'
+alias my_twitter='open -a /Applications/Google\ Chrome.app "http://twitter.com/johnamiahford"'
 
 # Edit files
 alias edit='subl'
