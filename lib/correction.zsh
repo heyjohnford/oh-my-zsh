@@ -11,4 +11,6 @@ else
   alias ebuild='nocorrect ebuild'
   alias hpodder='nocorrect hpodder'
   alias sudo='nocorrect sudo'
+  alias subl='nocorrect subl'
+  alias rbhash='nocorrect rbhash'
 fi
