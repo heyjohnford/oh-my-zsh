@@ -44,6 +44,13 @@ alias rvmgc='rvm gemset create'
 # Git
 alias gcm='git commit -m'
 
+# Server helpers
+alias pstart="python -m SimpleHTTPServer"
+alias nstart="npm start"
+
+# Todo
+alias todo="sh ~/Dropbox/apps/todo"
+
 # Browsers
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
