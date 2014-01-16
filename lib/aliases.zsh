@@ -51,6 +51,9 @@ alias nstart="npm start"
 # Todo
 alias todo="sh ~/Dropbox/apps/todo"
 
+# Get an entire website with wget
+alias wfetch = "wget -m -p -E -k -K -np"
+
 # Browsers
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
