@@ -42,6 +42,7 @@ alias rbhash='rbenv rehash'
 alias rvmgc='rvm gemset create'
 
 # Git
+alias git_score='git log --format=format:%an | sort | uniq -c | sort -r'
 alias gcm='git commit -m'
 
 # Server helpers
@@ -51,15 +52,20 @@ alias nstart="npm start"
 # Todo
 alias todo="sh ~/Dropbox/apps/todo"
 
-# Get an entire website with wget
-alias wfetch="wget -m -p -E -k -K -np"
-
 # Browsers
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
-alias my_github='open -a /Applications/Google\ Chrome.app "http://github.com/johnamiahford"'
-alias my_twitter='open -a /Applications/Google\ Chrome.app "http://twitter.com/johnamiahford"'
+alias github='open -a /Applications/Google\ Chrome.app "http://github.com/johnamiahford"'
+alias twitter='open -a /Applications/Google\ Chrome.app "http://twitter.com/johnamiahford"'
+alias gplus='open -a /Applications/Google\ Chrome.app "https://plus.google.com/+JohnAmiahFord/"'
+alias babymama='open -a /Applications/Google\ Chrome.app "http://babymamalife.com/"'
 
 # Edit files
 alias edit='subl'
+
+# Find ip address
+alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
+
+# Get an entire website with wget
+alias wfetch="wget -m -p -E -k -K -np"
