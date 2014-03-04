@@ -56,13 +56,24 @@ alias todo="sh ~/Dropbox/apps/todo"
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
 alias chrome='open /Applications/Google\ Chrome.app'
+
+# Social networks
 alias github='open -a /Applications/Google\ Chrome.app "http://github.com/johnamiahford"'
 alias twitter='open -a /Applications/Google\ Chrome.app "http://twitter.com/johnamiahford"'
 alias gplus='open -a /Applications/Google\ Chrome.app "https://plus.google.com/+JohnAmiahFord/"'
+
+# Websites
 alias babymama='open -a /Applications/Google\ Chrome.app "http://babymamalife.com/"'
+alias johnamiahford='open -a /Applications/Google\ Chrome.app "http://johnamiahford.com/"'
 
 # Edit files
 alias edit='subl'
+
+# Optimize images
+alias opng='find . -name "*.png" -exec optipng -o7 {} \;'
+alias echo_opng='find . -name "*.png" -exec echo optipng -o7 {} \;'
+alias ojpg='find . -name "*.jpg" -exec jpegoptim -m85 -o -p --strip-all {} \;'
+alias echo_ojpg='find . -name "*.jpg" -exec jpegoptim -m85 -o -p -n --strip-all {} \;'
 
 # Find ip address
 alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
