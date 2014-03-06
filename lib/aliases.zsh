@@ -49,8 +49,11 @@ alias gcm='git commit -m'
 alias pstart="python -m SimpleHTTPServer"
 alias nstart="npm start"
 
+# Shortcuts
+alias john='cd ~/Pi/repos/johnamiahford.com'
+
 # Todo
-alias todo="sh ~/Dropbox/apps/todo"
+alias todo='sh ~/Dropbox/apps/todo'
 
 # Browsers
 alias firefox='open /Applications/Firefox.app'
