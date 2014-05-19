@@ -41,10 +41,6 @@ alias rbhash='rbenv rehash'
 # rvm
 alias rvmgc='rvm gemset create'
 
-# Git
-alias git_score='git log --format=format:%an | sort | uniq -c | sort -r'
-alias gcm='git commit -m'
-
 # Server helpers
 alias pstart="python -m SimpleHTTPServer"
 alias nstart="npm start"
