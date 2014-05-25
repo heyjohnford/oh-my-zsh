@@ -81,5 +81,5 @@ alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias wfetch="wget -m -p -E -k -K -np"
 
 # Workflow
-alias work="cd ~/Base/skookum/"
-alias ash="cd ~/Base/skookum/ash/"
+alias work="cd ~/Base/work/"
+alias ash="cd ~/Base/work/ash/"
