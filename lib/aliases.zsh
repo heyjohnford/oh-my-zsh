@@ -79,3 +79,7 @@ alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 
 # Get an entire website with wget
 alias wfetch="wget -m -p -E -k -K -np"
+
+# Workflow
+alias work="cd ~/Base/skookum/"
+alias ash="cd ~/Base/skookum/ash/"
