@@ -81,4 +81,5 @@ alias wfetch="wget -m -p -E -k -K -np"
 alias work="cd ~/Sync/work/"
 alias ash="cd ~/Sync/work/ash/"
 alias conduit="cd ~/Sync/work/Conduit/"
-alias john='cd ~/Sync/repos/johnamiahford.com'
+alias john='cd ~/Sync/repos/johnamiahford.com/'
+alias repo='cd ~/Sync/repos/'
