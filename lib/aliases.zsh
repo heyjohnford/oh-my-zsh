@@ -45,9 +45,6 @@ alias rvmgc='rvm gemset create'
 alias pstart="python -m SimpleHTTPServer"
 alias nstart="npm start"
 
-# Shortcuts
-alias john='cd ~/Pi/repos/johnamiahford.com'
-
 # Todo
 alias todo='sh ~/Dropbox/apps/todo'
 
@@ -81,5 +78,7 @@ alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias wfetch="wget -m -p -E -k -K -np"
 
 # Workflow
-alias work="cd ~/Base/work/"
-alias ash="cd ~/Base/work/ash/"
+alias work="cd ~/Sync/work/"
+alias ash="cd ~/Sync/work/ash/"
+alias conduit="cd ~/Sync/work/Conduit/"
+alias john='cd ~/Sync/repos/johnamiahford.com'
