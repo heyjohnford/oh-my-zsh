@@ -38,6 +38,9 @@ alias afind='ack-grep -il'
 #rbenv
 alias rbhash='rbenv rehash'
 
+#node
+alias npm-exec='PATH=$(npm bin):$PATH'
+
 # rvm
 alias rvmgc='rvm gemset create'
 
@@ -82,4 +85,4 @@ alias work="cd ~/Dropbox/work/"
 alias ash="cd ~/Dropbox/work/ash/"
 alias conduit="cd ~/Dropbox/work/Conduit/"
 alias john='cd ~/Dropbox/repos/johnamiahford.com/'
-alias repo='cd ~/Dropbox/repos/'
+alias repos='cd ~/Dropbox/repos/'
