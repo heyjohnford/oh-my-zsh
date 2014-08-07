@@ -39,7 +39,7 @@ alias afind='ack-grep -il'
 alias rbhash='rbenv rehash'
 
 #node
-alias npm-exec='PATH=$(npm bin):$PATH'
+alias force='PATH=$(npm bin):$PATH'
 
 # rvm
 alias rvmgc='rvm gemset create'
