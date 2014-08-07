@@ -81,8 +81,8 @@ alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias wfetch="wget -m -p -E -k -K -np"
 
 # Workflow
-alias work="cd ~/Dropbox/work/"
-alias ash="cd ~/Dropbox/work/ash/"
-alias conduit="cd ~/Dropbox/work/Conduit/"
-alias john='cd ~/Dropbox/repos/johnamiahford.com/'
-alias repos='cd ~/Dropbox/repos/'
+alias work="cd ~/Git/skookum/"
+alias ash="cd ~/Git/skookum/ash/"
+alias conduit="cd ~/Git/skookum/Conduit/"
+alias john='cd ~/Git/john/johnamiahford.com/'
+alias repos='cd ~/Git/john/'
