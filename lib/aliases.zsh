@@ -85,4 +85,4 @@ alias work="cd ~/Git/skookum/"
 alias ash="cd ~/Git/skookum/ash/"
 alias conduit="cd ~/Git/skookum/Conduit/"
 alias john='cd ~/Git/john/johnamiahford.com/'
-alias repos='cd ~/Git/john/'
+alias repos='cd ~/Git/repos/'
