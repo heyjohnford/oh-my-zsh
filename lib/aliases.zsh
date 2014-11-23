@@ -66,7 +66,7 @@ alias babymama='open -a /Applications/Google\ Chrome.app "http://babymamalife.co
 alias johnamiahford='open -a /Applications/Google\ Chrome.app "http://johnamiahford.com/"'
 
 # Edit files
-alias edit='subl'
+alias edit='atom'
 
 # Optimize images
 alias opng='find . -name "*.png" -exec optipng -o7 {} \;'
@@ -81,8 +81,8 @@ alias findip='ifconfig | grep "inet " | grep -v 127.0.0.1'
 alias wfetch="wget -m -p -E -k -K -np"
 
 # Workflow
-alias work="cd ~/Git/skookum/"
-alias ash="cd ~/Git/skookum/ash/"
-alias conduit="cd ~/Git/skookum/Conduit/"
-alias john='cd ~/Git/john/johnamiahford.com/'
-alias repos='cd ~/Git/repos/'
+alias work="cd ~/Dropbox/git/skookum/"
+alias ash="cd ~/Dropbox/git/skookum/ash/"
+alias conduit="cd ~/Dropbox/git/skookum/Conduit/"
+alias repos='cd ~/Dropbox/git/repos/'
+alias john='cd ~/Dropbox/git/repos/johnamiahford.com/'
