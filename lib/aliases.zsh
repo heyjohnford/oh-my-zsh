@@ -85,4 +85,4 @@ alias work="cd ~/Dropbox/git/skookum/"
 alias ash="cd ~/Dropbox/git/skookum/ash/"
 alias conduit="cd ~/Dropbox/git/skookum/Conduit/"
 alias repos='cd ~/Dropbox/git/repos/'
-alias john='cd ~/Dropbox/git/repos/johnamiahford.com/'
+alias john='cd ~/Dropbox/git/websites/johnamiahford/'
