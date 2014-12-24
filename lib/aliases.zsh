@@ -66,7 +66,7 @@ alias babymama='open -a /Applications/Google\ Chrome.app "http://babymamalife.co
 alias johnamiahford='open -a /Applications/Google\ Chrome.app "http://johnamiahford.com/"'
 
 # Edit files
-alias edit='atom'
+alias edit='subl'
 
 # Optimize images
 alias opng='find . -name "*.png" -exec optipng -o7 {} \;'
