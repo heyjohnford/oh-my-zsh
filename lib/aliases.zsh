@@ -48,9 +48,6 @@ alias rvmgc='rvm gemset create'
 alias pstart="python -m SimpleHTTPServer"
 alias nstart="npm start"
 
-# Todo
-alias todo='sh ~/Dropbox/apps/todo'
-
 # Browsers
 alias firefox='open /Applications/Firefox.app'
 alias safari='open /Applications/Safari.app'
@@ -66,7 +63,10 @@ alias babymama='open -a /Applications/Google\ Chrome.app "http://babymamalife.co
 alias johnamiahford='open -a /Applications/Google\ Chrome.app "http://johnamiahford.com/"'
 
 # Edit files
-alias edit='subl'
+alias vim='nvim'
+alias mvim='nvim'
+alias vi='nvim'
+alias edit='nvim'
 
 # Optimize images
 alias opng='find . -name "*.png" -exec optipng -o7 {} \;'
