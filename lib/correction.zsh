@@ -10,7 +10,7 @@ if [[ "$ENABLE_CORRECTION" == "true" ]]; then
   alias mysql='nocorrect mysql'
   alias rbhash='nocorrect rbhash'
   alias sudo='nocorrect sudo'
-  alias subl='nocorrect subl'
+  alias su='nocorrect su'
 
   setopt correct_all
 fi
