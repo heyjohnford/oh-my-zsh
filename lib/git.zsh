@@ -11,6 +11,17 @@ function __git_prompt_git() {
   GIT_OPTIONAL_LOCKS=0 command git "$@"
 }
 
+# get the name of the branch we are on
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  if [[ -n $(git status -s 2> /dev/null) ]]; then
+    dirty_color=$fg[red]
+  else
+    dirty_color=$fg[green]
+  fi
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX%{$dirty_color%}${ref#refs/heads/}$(parse_git_dirty)$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
+
 function _omz_git_prompt_info() {
   # If we are on a folder not tracked by git, get out.
   # Otherwise, check for hide-info at global and local repository level
@@ -107,6 +118,7 @@ else
 fi
 
 # Checks if working tree is dirty
+<<<<<<< HEAD
 function parse_git_dirty() {
   local STATUS
   local -a FLAGS
@@ -128,12 +140,17 @@ function parse_git_dirty() {
     STATUS=$(__git_prompt_git status ${FLAGS} 2> /dev/null | tail -n 1)
   fi
   if [[ -n $STATUS ]]; then
+=======
+parse_git_dirty() {
+  if [[ -n $(git status -s 2> /dev/null) ]]; then
+>>>>>>> 8c85a099 (modify lib/ git.zsh and aliases.zsh)
     echo "$ZSH_THEME_GIT_PROMPT_DIRTY"
   else
     echo "$ZSH_THEME_GIT_PROMPT_CLEAN"
   fi
 }
 
+<<<<<<< HEAD
 # Gets the difference between the local and remote branches
 function git_remote_status() {
     local remote ahead behind git_remote_status git_remote_status_detailed
@@ -212,6 +229,21 @@ function git_commits_behind() {
 }
 
 # Outputs if current branch is ahead of remote
+=======
+# function git_prompt() {
+#   gstatus=$(git status 2> /dev/null)
+#   branch=$(echo $gstatus | head -1 | sed 's/^# On branch //')
+#   dirty=$(echo $gstatus | sed 's/^#.*$//' | tail -2 | grep 'nothing to commit (working directory clean)'; echo $?)
+#   if [[ x$branch != x ]]; then
+#     dirty_color=$fg[green]
+#     push_status=$(git_need_to_push $gstatus 2> /dev/null)
+#     if [[ $dirty = 1 ]] { dirty_color=$fg[red] }
+#     [ x$branch != x ] && echo " %{$dirty_color%}$branch%{$reset_color%} $push_status"
+#   fi
+# }
+
+# Checks if there are commits ahead from remote
+>>>>>>> 8c85a099 (modify lib/ git.zsh and aliases.zsh)
 function git_prompt_ahead() {
   if [[ -n "$(__git_prompt_git rev-list origin/$(git_current_branch)..HEAD 2> /dev/null)" ]]; then
     echo "$ZSH_THEME_GIT_PROMPT_AHEAD"
@@ -364,4 +396,16 @@ function git_repo_name() {
   if repo_path="$(__git_prompt_git rev-parse --show-toplevel 2>/dev/null)" && [[ -n "$repo_path" ]]; then
     echo ${repo_path:t}
   fi
+}
+
+function git_score () {
+  alias gscore='git_score'
+	git log | grep '^Author' | sort | uniq -ci | sort -r
+}
+
+function git_track () {
+  branch=$(current_branch)
+  git config branch.$branch.remote origin
+  git config branch.$branch.merge refs/heads/$branch
+  echo "tracking origin/$tracking"
 }
